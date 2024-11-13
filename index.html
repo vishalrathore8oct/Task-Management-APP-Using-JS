@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <!-- link the css style sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- link the fontawesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Task Management App</h1>
+        <form action="" id="todo-form">
+            <label for="title">Task Title</label>
+            <input type="text" id="title" required>
+            <label for="description">Task Description</label>
+            <textarea name="description" id="description" required cols="30" rows="10"></textarea>
+            <label for="date">Due Date</label>
+            <input type="date" id="date" required>
+            <label for="priority">Task Priority</label>
+            <select name="priority" id="priority" required>
+                <option value="">Select Priority</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <button id="button"><i class="fa-solid fa-circle-plus"></i></button>
+        </form>
+
+
+        <!-- New filter form section -->
+        <div class="filter-container">
+            <label for="filter-priority">Priority:</label>
+            <select id="filter-priority">
+                <option value="all">All</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+            <br>
+            <label for="filter-due-date">Due Date:</label>
+            <select id="filter-due-date">
+                <option value="all">All</option>
+                <option value="7days">Next 7 Days</option>
+                <option value="4days">Next 4 Days</option>
+                <option value="today">Today</option>
+            </select>
+            <br>
+            <label for="filter-status">Status:</label>
+            <select id="filter-status">
+                <option value="all">All</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+            </select>
+
+        </div>
+
+    </div>
+    <div class="right-container">
+        <div class="pending-container">
+            <h1>Pending To Do Lists</h1>
+            <div id="pending-todos-list">
+            </div>
+        </div>
+        <div class="completed-container">
+            <h1>Completed To Do Lists</h1>
+            <div id="completed-todos-list">
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
